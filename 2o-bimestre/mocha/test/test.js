@@ -1,5 +1,6 @@
 const assert = require("assert");
-const { soma, sub, mult, div } = require("../src/math");
+// const { soma, sub, mult, div } = require("../src/math");
+const {crud} = require('../test/tests')
 
 describe("Math", function () {
     describe("Soma()", function () {
@@ -7,6 +8,7 @@ describe("Math", function () {
             assert.strictEqual(soma(2, 3), 5);
             assert.strictEqual(soma(-1, 5), 4);
             assert.strictEqual(soma(0, 0), 0);
+            assert.strictEqual(soma(-1, -3), -4);
         });
     })
     describe("Sub()", () => {
@@ -28,6 +30,21 @@ describe("Math", function () {
             assert.strictEqual(div(6, 3), 2)
             assert.strictEqual(div(8, 2), 4)
             assert.strictEqual(div(3, 3), 1)
+        })
+        it("Deve retornar a div de dois números", () => {
+            assert.strictEqual(div(5, 0), Infinity)
+        })
+        it("Deve retornar a div de dois números", () => {
+            assert.strictEqual(div(2, 2), 1)
+        })
+    })
+    describe("CRUD", () => {
+        describe("CreateItem", () => {
+            it("Adicionar um item na lista", () => {
+                let c = new crud()
+                c.createItem("Teste")
+                assert.strictEqual(c.items.length, 1)
+            })
         })
     })
 });
