@@ -1,6 +1,6 @@
 const assert = require("assert");
 // const { soma, sub, mult, div } = require("../src/math");
-const {crud} = require('../test/tests')
+const {CRUD} = require('../test/tests')
 
 describe("Math", function () {
     describe("Soma()", function () {
@@ -41,8 +41,10 @@ describe("Math", function () {
     describe("CRUD", () => {
         describe("CreateItem", () => {
             it("Adicionar um item na lista", () => {
-                let c = new crud()
-                c.createItem("Teste")
+                let c = new CRUD()
+                c.createItem("Item 1")
+                c.createItem("Item 2")
+                c.createItem("Item 3")
                 assert.strictEqual(c.items.length, 1)
             })
         })
