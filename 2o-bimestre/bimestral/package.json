@@ -1,11 +1,10 @@
 {
-  "dependencies": {
-    "mocha": "^10.2.0"
-  },
   "name": "bimestral",
   "version": "1.0.0",
   "main": "arquivo.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "^10.2.0"
+  },
   "scripts": {
     "test": "mocha"
   },

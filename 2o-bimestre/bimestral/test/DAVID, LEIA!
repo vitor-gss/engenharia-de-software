@@ -1,0 +1,3 @@
+O nome do arquivo crud.test.js precisou ser renomeado para test.js, pois o comando npx mocha não estava funcionando
+esse nome.
+Tenha uma boa noite :)
