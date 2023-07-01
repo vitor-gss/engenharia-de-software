@@ -22,6 +22,12 @@ describe("CRUD", function() {
   });
 
   describe("readItems()", function() {
-
+    it("Lê todos os itens", () => {
+      let c = new CRUD();
+      c.createItem("Item 1");
+      c.createItem("Item 2");
+      c.createItem("Item 3");
+      assert.strict
+    })
   });
 });
